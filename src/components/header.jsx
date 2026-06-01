@@ -15,7 +15,7 @@ export function Header() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">C</span>
             </div>
-            <span className="font-bold text-xl text-foreground">CuidaCare</span>
+            <span className="font-bold text-xl text-foreground">ConCare</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -71,7 +71,7 @@ export function Header() {
                 <Link to="/seja-um-cuidador">
                   <Button variant="ghost" size="sm" className="justify-start w-full">Seja um Cuidador</Button>
                 </Link>
-                <Link to="/login">
+                <Link to="/entrar">
                   <Button variant="outline" size="sm" className="justify-start w-full bg-transparent">
                     <User className="w-4 h-4 mr-2" />
                     Entrar

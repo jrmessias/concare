@@ -11,7 +11,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">C</span>
               </div>
-              <span className="font-bold text-xl">CuidaCare</span>
+              <span className="font-bold text-xl">ConCare</span>
             </div>
             <p className="text-gray-400 text-pretty">
               Conectando famílias a cuidadores de idosos qualificados em todo o Brasil.
@@ -89,7 +89,7 @@ export function Footer() {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contato@cuidacare.com.br</span>
+                <span>contato@concare.com.br</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
@@ -104,7 +104,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 CuidaCare. Todos os direitos reservados.</p>
+          <p>&copy; 2024 ConCare. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

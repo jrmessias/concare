@@ -15,7 +15,7 @@ export default function ComoFuncionaPage() {
                 <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-16">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                            Como Funciona a CuidaCare
+                            Como Funciona a ConCare
                         </h1>
                         <p className="text-xl text-muted-foreground mb-8 text-pretty">
                             Conectamos famílias a cuidadores qualificados de forma simples, segura e humanizada.
@@ -70,7 +70,7 @@ export default function ComoFuncionaPage() {
                 <section className="bg-muted/30 dark:bg-muted/10 py-16">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-foreground mb-4">Por que escolher a CuidaCare?</h2>
+                            <h2 className="text-3xl font-bold text-foreground mb-4">Por que escolher a ConCare?</h2>
                             <p className="text-xl text-muted-foreground">Garantimos a melhor experiência para sua família</p>
                         </div>
 

@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    /* CuidaCare - Sistema de Busca de Cuidadores */
     --background: #ffffff;
     --foreground: #1e3a5f;
     --card: #f0f9ff;

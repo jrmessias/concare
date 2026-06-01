@@ -6,6 +6,9 @@ import EncontrarCuidador from './pages/EncontrarCuidadorPage.jsx'
 import ComoFunciona from './pages/ComoFuncionaPage.jsx'
 import SejaCuidador from './pages/SejaCuidadorPage.jsx'
 import EntrarPage from './pages/EntrarPage.jsx'
+import RecuperarSenhaPage from './pages/RecuperarSenhaPage.jsx'
+import TermosPage from './pages/TermosPage.jsx'
+import PrivacidadePage from './pages/PrivacidadePage.jsx'
 
 function App() {
     return (
@@ -18,6 +21,9 @@ function App() {
                 <Route path="/como-funciona" element={<ComoFunciona/>}/>
                 <Route path="/seja-um-cuidador" element={<SejaCuidador/>}/>
                 <Route path="/entrar" element={<EntrarPage/>}/>
+                <Route path="/recuperar-senha" element={<RecuperarSenhaPage/>}/>
+                <Route path="/termos" element={<TermosPage/>}/>
+                <Route path="/privacidade" element={<PrivacidadePage/>}/>
             </Routes>
         </div>
     )

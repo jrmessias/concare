@@ -12,7 +12,7 @@ const testimonials = [
     name: "Roberto Almeida",
     relation: "Filho de paciente",
     rating: 5,
-    comment: "Depois de meses procurando, achamos a CuidaCare. O processo foi simples e a cuidadora que contratamos superou todas as expectativas.",
+    comment: "Depois de meses procurando, achamos a ConCare. O processo foi simples e a cuidadora que contratamos superou todas as expectativas.",
   },
   {
     name: "Fernanda Santos",

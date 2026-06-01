@@ -19,7 +19,7 @@ export default function SejaCuidadorPage() {
                 <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-16">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                            Seja um Cuidador CuidaCare
+                            Seja um Cuidador ConCare
                         </h1>
                         <p className="text-xl text-muted-foreground mb-8 text-pretty">
                             Conecte-se com famílias que precisam do seu cuidado. Trabalhe com flexibilidade e receba de forma justa.
@@ -39,7 +39,7 @@ export default function SejaCuidadorPage() {
                 <section className="py-16 bg-background">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-foreground mb-4">Vantagens de ser um Cuidador CuidaCare</h2>
+                            <h2 className="text-3xl font-bold text-foreground mb-4">Vantagens de ser um Cuidador ConCare</h2>
                             <p className="text-xl text-muted-foreground">Tudo que você precisa para fazer a diferença na vida de idosos</p>
                         </div>
 
@@ -103,29 +103,29 @@ export default function SejaCuidadorPage() {
                                 <div className="grid md:grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <Label htmlFor="nome">Nome Completo</Label>
-                                        <Input id="nome" placeholder="Seu nome completo" />
+                                        <Input id="nome" placeholder="Seu nome completo" className="border-accent/20 border-2 focus:right-0" />
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="email">E-mail</Label>
-                                        <Input id="email" type="email" placeholder="seu@email.com" />
+                                        <Input id="email" type="email" placeholder="seu@email.com"  className="border-accent/20 border-2 focus:right-0"  />
                                     </div>
                                 </div>
 
                                 <div className="grid md:grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <Label htmlFor="telefone">Telefone / WhatsApp</Label>
-                                        <Input id="telefone" placeholder="(11) 99999-9999" />
+                                        <Input id="telefone" placeholder="(11) 99999-9999" className="border-accent/20 border-2 focus:right-0"  />
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="cidade">Cidade</Label>
-                                        <Input id="cidade" placeholder="Sua cidade" />
+                                        <Input id="cidade" placeholder="Sua cidade" className="border-accent/20 border-2 focus:right-0"  />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
                                     <Label htmlFor="especialidade">Especialidade Principal</Label>
                                     <Select>
-                                        <SelectTrigger>
+                                        <SelectTrigger  className="border-accent/20 border-2 focus:right-0" >
                                             <SelectValue placeholder="Selecione sua especialidade" />
                                         </SelectTrigger>
                                         <SelectContent>
@@ -145,6 +145,7 @@ export default function SejaCuidadorPage() {
                                         id="experiencia"
                                         placeholder="Conte um pouco sobre sua experiência cuidando de idosos, cursos realizados, certificações..."
                                         rows={4}
+                                        className="border-accent/20 border-2 focus:right-0"
                                     />
                                 </div>
 
@@ -212,7 +213,7 @@ export default function SejaCuidadorPage() {
                                         </div>
                                     </div>
                                     <p className="text-muted-foreground text-sm mb-4">
-                                        &quot;Finalmente posso escolher meus horários e trabalhar perto de casa. A CuidaCare mudou minha vida profissional.&quot;
+                                        &quot;Finalmente posso escolher meus horários e trabalhar perto de casa. A ConCare mudou minha vida profissional.&quot;
                                     </p>
                                     <div className="flex items-center">
                                         <Star className="w-4 h-4 text-secondary fill-current" />
