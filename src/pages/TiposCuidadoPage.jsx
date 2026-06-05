@@ -2,6 +2,7 @@ import {Header} from "@/components/header"
 import {Footer} from "@/components/footer"
 import {WhatsAppButton} from "@/components/whatsapp-button"
 import {Button} from "@/components/ui/button"
+import {AdBanner} from "@/components/ad-banner"
 import {Card, CardContent} from "@/components/ui/card"
 import {Activity, ArrowRight, Brain, Heart, Moon, Stethoscope, Users} from "lucide-react"
 import {Link} from "react-router-dom"
@@ -160,6 +161,8 @@ export default function TiposDeCuidadoPage() {
                         </div>
                     </div>
                 </section>
+
+                <AdBanner columns={4}/>
 
                 {/* CTA Section */}
                 <section className="bg-primary/5 dark:bg-primary/10 py-16">

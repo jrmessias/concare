@@ -4,6 +4,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Search, MessageCircle, Heart, Star, CheckCircle, Shield, Clock, Users } from "lucide-react"
+import { AdBanner } from "@/components/ad-banner"
 import { Link } from "react-router-dom"
 
 export default function ComoFuncionaPage() {
@@ -149,6 +150,8 @@ export default function ComoFuncionaPage() {
                         </div>
                     </div>
                 </section>
+
+                <AdBanner columns={4} />
 
                 {/* CTA Section */}
                 <section className="py-16 bg-background">

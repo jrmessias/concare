@@ -8,6 +8,7 @@ import {Button} from "@/components/ui/button"
 import {Input} from "@/components/ui/input"
 import {Badge} from "@/components/ui/badge"
 import {CheckCircle, Clock, Heart, MapPin, MessageCircle, Search, Shield, Star} from "lucide-react"
+import {AdBanner} from "@/components/ad-banner"
 import {useState} from "react"
 
 const caregivers = [
@@ -290,6 +291,8 @@ export default function CuidadoresPage() {
                             busca.</p>
                     </div>
                 )}
+
+                <AdBanner columns={4}/>
             </div>
         </main>
 
