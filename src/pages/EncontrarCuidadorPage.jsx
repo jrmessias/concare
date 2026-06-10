@@ -7,7 +7,8 @@ import {Card, CardContent} from "@/components/ui/card"
 import {Button} from "@/components/ui/button"
 import {Input} from "@/components/ui/input"
 import {Badge} from "@/components/ui/badge"
-import {CheckCircle, Clock, Heart, MapPin, MessageCircle, Search, Shield, Star} from "lucide-react"
+import {cn} from "@/lib/utils"
+import {CheckCircle, Clock, Heart, MapPin, MessageCircle, Search, Shield, Star, Sparkles} from "lucide-react"
 import {AdBanner} from "@/components/ad-banner"
 import {useState} from "react"
 
@@ -27,6 +28,8 @@ const caregivers = [
         specialties: ["Cuidado de Idosos", "Alzheimer", "Medicação"],
         description: "Cuidadora experiente com mais de 8 anos de experiência. Especializada em cuidados com idosos e pacientes com Alzheimer.",
         experience: "8 anos",
+        planos: ["Plano ConCare", "Plano Flex"],
+        destaque: true,
     },
     {
         id: 2,
@@ -209,23 +212,49 @@ export default function CuidadoresPage() {
                 {/* Caregivers Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredCaregivers.map((caregiver) => (
-                        <Card key={caregiver.id} className="bg-card hover:shadow-lg hover:shadow-accent/20 transition-shadow border-border">
+                        <Card key={caregiver.id} className={cn("bg-card hover:shadow-lg hover:shadow-accent/20 transition-shadow border-border relative overflow-visible",
+                            caregiver.id === 1 && "border-primary/40 shadow-md shadow-primary/10 ring-1 ring-primary/20"
+                        )}>
                             <CardContent className="p-6 space-y-4">
+                                {/* Destaque Badge */}
+                                {caregiver.id === 1 && (
+                                    <Badge className="absolute -top-3 right-4 bg-primary text-primary-foreground px-3 py-1 text-xs">
+                                        <Sparkles className="w-3 h-3 mr-1" />
+                                        Em Destaque
+                                    </Badge>
+                                )}
+
                                 {/* Profile Header */}
                                 <div className="flex items-start space-x-4">
-                                    <div className="relative">
+                                    <div className={cn("relative",
+                                        caregiver.id === 1 && "ring-2 ring-primary rounded-full"
+                                    )}>
                                         <div
                                             className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                                             <Heart className="w-8 h-8 text-primary"/>
                                         </div>
-                                        {caregiver.verified && (
+                                        {caregiver.id === 1 && (
+                                            <div className="absolute -top-1 -right-1">
+                                                <Star className="w-5 h-5 text-yellow-500 fill-yellow-500 drop-shadow-sm" />
+                                            </div>
+                                        )}
+                                        {caregiver.verified && caregiver.id !== 1 && (
                                             <div className="absolute -bottom-1 -right-1 bg-secondary rounded-full p-1">
                                                 <CheckCircle className="w-4 h-4 text-secondary-foreground"/>
                                             </div>
                                         )}
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="font-semibold text-lg text-foreground truncate">{caregiver.name}</h3>
+                                        <div className="flex items-center gap-2">
+                                            <h3 className={cn("font-semibold text-lg text-foreground truncate",
+                                                caregiver.id === 1 && "text-primary"
+                                            )}>{caregiver.name}</h3>
+                                            {caregiver.planos?.map((plano, i) => (
+                                                <Badge key={i} variant="secondary" className="text-[10px] px-1.5 py-0">
+                                                    {plano}
+                                                </Badge>
+                                            ))}
+                                        </div>
                                         <p className="text-muted-foreground text-sm">{caregiver.specialty}</p>
                                         <div className="flex items-center space-x-1 mt-1">
                                             <Star className="w-4 h-4 fill-secondary text-secondary"/>

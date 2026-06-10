@@ -9,6 +9,7 @@ import EntrarPage from './pages/EntrarPage.jsx'
 import RecuperarSenhaPage from './pages/RecuperarSenhaPage.jsx'
 import TermosPage from './pages/TermosPage.jsx'
 import PrivacidadePage from './pages/PrivacidadePage.jsx'
+import PlanosPage from './pages/PlanosPage.jsx'
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/recuperar-senha" element={<RecuperarSenhaPage/>}/>
                 <Route path="/termos" element={<TermosPage/>}/>
                 <Route path="/privacidade" element={<PrivacidadePage/>}/>
+                <Route path="/planos" element={<PlanosPage/>}/>
             </Routes>
         </div>
     )

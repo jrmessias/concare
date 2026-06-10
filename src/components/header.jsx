@@ -31,6 +31,9 @@ export function Header() {
             <Link to="/como-funciona" className="text-muted-foreground hover:text-foreground transition-colors">
               Como Funciona
             </Link>
+            <Link to="/planos" className="text-muted-foreground hover:text-foreground transition-colors">
+              Planos
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -62,6 +65,9 @@ export function Header() {
               </Link>
               <Link to="/como-funciona" className="text-muted-foreground hover:text-foreground transition-colors">
                 Como Funciona
+              </Link>
+              <Link to="/planos" className="text-muted-foreground hover:text-foreground transition-colors">
+                Planos
               </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <div className="flex items-center justify-between">
