@@ -8,7 +8,7 @@ import { Check, Star, Sparkles, TrendingUp, Search, Award, ArrowUp } from "lucid
 
 const planoMensal = {
     nome: "Plano ConCare",
-    preco: "30,00",
+    preco: "XX,XX",
     periodo: "mês",
     descricao: "Assinatura mensal para cuidadores que desejam maximizar sua visibilidade e atrair mais famílias.",
     destaque: true,
@@ -21,13 +21,26 @@ const planoMensal = {
 
 const planoOnDemand = {
     nome: "Plano Flex",
-    preco: "20,00",
-    periodo: "por serviço",
+    preco: "XX,XX",
+    periodo: "serviço",
     descricao: "Pagamento por serviço realizado. Ideal para cuidadores que querem divulgação sob demanda.",
     destaque: false,
     beneficios: [
         "Pagamento apenas por serviço realizado",
         "Sem fidelidade ou vínculo mensal",
+        "Avaliação e feedback das famílias",
+    ],
+}
+
+const planoStar = {
+    nome: "Plano Star",
+    preco: "XX,00",
+    periodo: "mês",
+    descricao: "Apareça por primeiro. Ganhe destaque nas buscas e tenha mais visibilidade.",
+    destaque: false,
+    beneficios: [
+        "Pagamento mensal",
+        "Somente para quem está ativo em algum plano",
         "Avaliação e feedback das famílias",
     ],
 }
@@ -77,7 +90,7 @@ export default function PlanosPage() {
 
                 <section className="py-16 bg-background">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid md:grid-cols-2 gap-8">
+                        <div className="grid md:grid-cols-3 gap-8">
                             <Card className={`relative border-2 overflow-visible ${planoMensal.destaque ? 'border-primary shadow-lg shadow-primary/10' : 'border-border'}`}>
                                 {planoMensal.destaque && (
                                     <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 text-sm">
@@ -89,8 +102,8 @@ export default function PlanosPage() {
                                     <CardTitle className="text-2xl font-bold">{planoMensal.nome}</CardTitle>
                                     <CardDescription className="text-base">{planoMensal.descricao}</CardDescription>
                                     <div className="mt-4">
-                                        <span className="text-5xl font-bold text-foreground">R$ {planoMensal.preco}</span>
-                                        <span className="text-muted-foreground text-lg ml-2">/{planoMensal.periodo}</span>
+                                        <span className="text-4xl font-bold text-foreground">R$ {planoMensal.preco}</span>
+                                        <span className="text-muted-foreground text-md ml-1">/{planoMensal.periodo}</span>
                                     </div>
                                 </CardHeader>
                                 <CardContent className="space-y-6">
@@ -115,13 +128,39 @@ export default function PlanosPage() {
                                     <CardTitle className="text-2xl font-bold">{planoOnDemand.nome}</CardTitle>
                                     <CardDescription className="text-base">{planoOnDemand.descricao}</CardDescription>
                                     <div className="mt-4">
-                                        <span className="text-5xl font-bold text-foreground">R$ {planoOnDemand.preco}</span>
-                                        <span className="text-muted-foreground text-lg ml-2">/{planoOnDemand.periodo}</span>
+                                        <span className="text-4xl font-bold text-foreground">R$ {planoOnDemand.preco}</span>
+                                        <span className="text-muted-foreground text-md ml-2">/{planoOnDemand.periodo}</span>
                                     </div>
                                 </CardHeader>
                                 <CardContent className="space-y-6">
                                     <ul className="space-y-3">
                                         {planoOnDemand.beneficios.map((beneficio, index) => (
+                                            <li key={index} className="flex items-start gap-3">
+                                                <div className="w-6 h-6 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                    <Check className="w-4 h-4 text-secondary" />
+                                                </div>
+                                                <span className="text-muted-foreground">{beneficio}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <Button variant="outline" className="w-full border-accent/20" size="lg">
+                                        Contratar Agora
+                                    </Button>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="border-border border-2">
+                                <CardHeader className="text-center pt-8">
+                                    <CardTitle className="text-2xl font-bold">{planoStar.nome}</CardTitle>
+                                    <CardDescription className="text-base">{planoStar.descricao}</CardDescription>
+                                    <div className="mt-4">
+                                        <span className="text-4xl font-bold text-foreground">R$ {planoStar.preco}</span>
+                                        <span className="text-muted-foreground text-md ml-1">/{planoStar.periodo}</span>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="space-y-6">
+                                    <ul className="space-y-3">
+                                        {planoStar.beneficios.map((beneficio, index) => (
                                             <li key={index} className="flex items-start gap-3">
                                                 <div className="w-6 h-6 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                                     <Check className="w-4 h-4 text-secondary" />
